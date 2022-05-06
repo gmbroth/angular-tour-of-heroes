@@ -6,6 +6,12 @@
 	<!-- (click) passes the input value to add() and then clears the input field -->
 	<button type='button' class='add=button' (click)='add(heroName.value); heroName.value="";'>
 	Add hero</button>
+	<div *ngIf="getErrors().length">
+	 	<div class='alert' *ngFor='let error of getErrors()'> {{error}} 
+			<button type="button" class="clear"
+			          (click)="this.clearErrors()">Dismiss</button>
+		</div>
+	</div>
 </div>
 <ul class='heroes'>
 	<li *ngFor="let hero of heroes">
