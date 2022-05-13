@@ -1,6 +1,10 @@
 # AngularTourOfHeroes
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 13.3.0.
+This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 13.3.0. The OOB tutorial was extended by me as follows:
+
+1. Reverse the presentation order of messages by displaying the most recent ones at the top
+2. Add a timestamp to each message; format message display using a table
+3. An attempt to create a duplicate hero is rejected, displaying an error message (along with an error-dismiss button)
 
 ## Development server
 
