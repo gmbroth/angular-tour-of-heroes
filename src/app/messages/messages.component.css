@@ -17,3 +17,7 @@ h2 {
   color: white;
   background-color: #42545C;
 }
+
+table {
+  border: none;
+}

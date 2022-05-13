@@ -42,7 +42,7 @@ export class HeroesComponent implements OnInit {
     if (!name) { return; }
     if (this.heroes.some(element => element.name === name)) {
       this.addError(`A hero with the name "${name}" already exists; please try a different name`);
-      this.messageService.add(`Rejected duplicate hero name ${name}`);
+      this.messageService.add(`Heroes: Rejected hero with duplicate name "${name}"`);
       return;
     }
     this.heroService.addHero({name} as Hero).subscribe(hero => {this.heroes.push(hero);});

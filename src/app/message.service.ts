@@ -1,13 +1,14 @@
 import { Injectable } from '@angular/core';
+import { Message } from './message';
 
 @Injectable({
   providedIn: 'root',
 })
 export class MessageService {
-  messages: string[] = [];
+  messages: Message[] = [];
 
   add(message: string) {
-    this.messages.unshift(`${message} at ${new Date().toLocaleString()}`);
+     this.messages.unshift({'content': message, 'timestamp': new Date().toLocaleString()} as Message);   
   }
 
   clear() {
